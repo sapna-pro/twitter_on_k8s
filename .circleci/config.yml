@@ -36,6 +36,20 @@ jobs:
             chmod +x ./aws-iam-authenticator
             mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
             echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+      - run:
+          name: Docker rockstar-front Operations
+          command: |
+            echo "LOG IN COMPLETED" | docker login -u=$DockerUsername -p=$DockerPassword
+            ls -al
+            docker build -f rockstar-front/Dockerfile -t $DockerUsername/rockstar-front:circleci .
+            sleep 150
+            docker push $DockerUsername/rockstar-front:circleci
+      - run:
+          name: Docker sa-flask-logic Operations
+          command: |
+            docker build -f sa-flask-logic/Dockerfile -t $DockerUsername/sa-flask-logic:circleci .
+            sleep 150
+            docker push $DockerUsername/sa-flask-logic:circleci
 workflows:
   version: 2
   build_and_test:
