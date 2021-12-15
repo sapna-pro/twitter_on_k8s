@@ -1,5 +1,9 @@
 HELP.md
-target/
+# target/
+target/classes
+target/generated-sources
+target/maven-archiver
+target/maven-status
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -46,7 +50,8 @@ build/
 .mtj.tmp/
 
 # Package Files #
-*.jar
+# *.jar
+*.jar.original
 *.war
 *.nar
 *.ear

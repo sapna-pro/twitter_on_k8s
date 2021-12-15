@@ -42,14 +42,20 @@ jobs:
             echo "LOG IN COMPLETED" | docker login -u=$DockerUsername -p=$DockerPassword
             ls -al
             docker build -f rockstar-front/Dockerfile -t $DockerUsername/rockstar-front:circleci .
-            sleep 150
+            sleep 120
             docker push $DockerUsername/rockstar-front:circleci
       - run:
           name: Docker sa-flask-logic Operations
           command: |
             docker build -f sa-flask-logic/Dockerfile -t $DockerUsername/sa-flask-logic:circleci .
-            sleep 150
+            sleep 120
             docker push $DockerUsername/sa-flask-logic:circleci
+      - run:
+          name: Docker sa-java-webapp Operations
+          command: |
+            docker build -f sa-java-webapp/Dockerfile -t $DockerUsername/sa-java-webapp:circleci .
+            sleep 120
+            docker push $DockerUsername/sa-java-webapp:circleci
 workflows:
   version: 2
   build_and_test:
