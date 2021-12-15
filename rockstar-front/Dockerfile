@@ -7,11 +7,13 @@ FROM node:15.2.0-alpine as builder
 
 # set working directory
 WORKDIR /usr/src/app
+ls -al
 
 # add /usr/src/app/node_modules/.bin to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
+ls -al
 COPY package.json .
 COPY package-lock.json .
 RUN npm ci
