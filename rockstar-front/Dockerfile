@@ -13,9 +13,9 @@ ls -al
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-ls -al
-COPY package.json .
-COPY package-lock.json .
+
+COPY rockstar-front/package.json .
+COPY rockstar-front/package-lock.json .
 RUN npm ci
 #RUN npm install react-scripts@4.0.0 --silent
 
