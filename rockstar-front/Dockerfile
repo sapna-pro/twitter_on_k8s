@@ -25,6 +25,7 @@ RUN ls -al
 
 COPY rockstar-front/package.json .
 COPY rockstar-front/package-lock.json .
+COPY rockstar-front/public .
 RUN npm ci
 #RUN npm install react-scripts@4.0.0 --silent
 
