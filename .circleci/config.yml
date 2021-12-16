@@ -56,6 +56,31 @@ jobs:
             docker build -f sa-java-webapp/Dockerfile -t $DockerUsername/sa-java-webapp:circleci .
             sleep 120
             docker push $DockerUsername/sa-java-webapp:circleci
+      - run:
+          name: deploy on K8S
+          command: |
+            echo "LOG IN COMPLETED" | docker login -u=$DockerUsername -p=$DockerPassword
+            aws eks update-kubeconfig --name terraform-eks-demo --region us-west-2 --role-arn arn:aws:iam::327657571721:user/sapna
+            ls -al
+            cp config ~/.kube/config
+            kubectl apply -f config-map-aws-auth.yml
+            sleep 10
+            kubectl get nodes
+            cd K8S/
+            kubectl apply -f rockstar-front-deployment.yaml
+            sleep 10
+            kubectl get deployments
+            kubectl apply -f service-rockstar-front-lb.yaml
+            sleep 10
+            kubectl get svc
+            sleep 10
+            kubectl apply -f sa-flask-deployment.yaml
+            sleep 10
+            kubectl apply -f service-sa-flask-lb.yaml
+            sleep 10
+            kubectl apply -f sa-webapp-deployment.yaml
+            sleep 10
+            kubectl apply -f service-sa-webapp-lb.yaml
 workflows:
   version: 2
   build_and_test:

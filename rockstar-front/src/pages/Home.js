@@ -42,7 +42,7 @@ function Home(props) {
   }, []);
 
   function callPython() {
-    axios.get(`http://192.168.99.100:5050/testHealth`)
+    axios.get(`http://sa-logic:5000/testHealth`)
       .then(res => {
         setValue(res.data);
         setShowValue(true);
@@ -50,7 +50,7 @@ function Home(props) {
   }
 
   function callJava() {
-    axios.get(`http://192.168.99.100:8080/testHealth`)
+    axios.get(`http://sa-webapp:8080/testHealth`)
       .then(res => {
         setValue(res.data);
         setShowValue(true);

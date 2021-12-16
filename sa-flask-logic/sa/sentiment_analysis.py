@@ -43,7 +43,7 @@ def testHealth():
 @app.route("/testComms", methods=['GET'])
 @cross_origin()
 def testComms():
-    response = requests.get('http://192.168.99.100:8080/testHealth')
+    response = requests.get('http://sa-webapp:8080/testHealth')
     return response.text
 
 @app.route("/analyse/sentiment", methods=['POST'])

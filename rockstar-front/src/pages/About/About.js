@@ -23,7 +23,7 @@ const AboutPage = () => {
 
   const getSentiment = () => {
     async function fetchData() {
-      const req = await axios.post(`http://192.168.99.100:8080/sentiment`, {
+      const req = await axios.post(`http://sa-webapp:8080/sentiment`, {
         "sentence": songLyrics
       })
         .then(res => {
