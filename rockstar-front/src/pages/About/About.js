@@ -8,11 +8,11 @@ import miracle from "../../images/MiracleBG.jpg";
 import FFA from "../../images/FFA.jpg";
 import { Typography, Button } from '@material-ui/core'
 
-const AboutPage = () => {
+const AboutPage = ({ javaWebApp, dotnetApi }) => {
 
   const getSong = () => {
     async function fetchData() {
-      const req = await axios.get(`http://192.168.99.100:5001/Song/${url}`)
+      const req = await axios.get(`${dotnetApi}/Song/${url}`)
         .then(res => {
           const lyrics = res.data;
           setSongLyrics(lyrics);
@@ -23,7 +23,7 @@ const AboutPage = () => {
 
   const getSentiment = () => {
     async function fetchData() {
-      const req = await axios.post(`http://sa-webapp:8080/sentiment`, {
+      const req = await axios.post(`${javaWebApp}/sentiment`, {
         "sentence": songLyrics
       })
         .then(res => {
@@ -41,8 +41,17 @@ const AboutPage = () => {
   useEffect(() => {
     const url = window.location.href;
     const splitWord = url.split("/");
-    const last = splitWord[splitWord.length - 1];
-    setUrl(last);
+    console.log("splitWord = ", splitWord);
+    if (splitWord[4].includes("?")) {
+      const splitFour = splitWord[4].split("?");
+      const last = splitFour[0];
+      setUrl(last);
+    } else {
+      const last = splitWord[4];
+      setUrl(last);
+    }
+
+    console.log("url === ", url);
   }, [])
 
 

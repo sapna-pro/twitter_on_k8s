@@ -33,16 +33,17 @@ const styles = theme => ({
 });
 
 function Home(props) {
-  const { classes } = props;
+  const { classes, javaWebApp, dotnetApi } = props;
   const [value, setValue] = useState('');
   const [showValue, setShowValue] = useState(false);
 
   useEffect(() => {
+    console.log("props ===== ", props)
     setShowValue(false);
   }, []);
-
+  console.log("props ===== ")
   function callPython() {
-    axios.get(`http://sa-logic:5000/testHealth`)
+    axios.get(`${javaWebApp}/testComms`)
       .then(res => {
         setValue(res.data);
         setShowValue(true);
@@ -50,7 +51,7 @@ function Home(props) {
   }
 
   function callJava() {
-    axios.get(`http://sa-webapp:8080/testHealth`)
+    axios.get(`${javaWebApp}/testHealth`)
       .then(res => {
         setValue(res.data);
         setShowValue(true);
@@ -58,7 +59,7 @@ function Home(props) {
   }
 
   function callDotnet() {
-    axios.get(`http://192.168.99.100:5001/testHealth`)
+    axios.get(`${dotnetApi}/testHealth`)
       .then(res => {
         setValue(res.data);
         setShowValue(true);

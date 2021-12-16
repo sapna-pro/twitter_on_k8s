@@ -136,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Dashboard() {
+export default function Dashboard({ javaWebApp, dotnetApi }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const [collapsed, setCollapsed] = React.useState(false);
@@ -277,10 +277,10 @@ export default function Dashboard() {
 
         {/* This is your mission control: Matches URLs above to your components */}
         <main className={classes.content}>
-          <Route exact path="/" component={Home} />
-          <Route path="/charts/Miracle" component={About} />
-          <Route path="/deposits/SongBM" component={About} />
-          <Route path="/orders/FFA" component={About} />
+          <Route exact path="/" render={(props) => <Home javaWebApp={javaWebApp} dotnetApi={dotnetApi} {...props} />} />
+          <Route path="/charts/Miracle" render={(props) => <About javaWebApp={javaWebApp} dotnetApi={dotnetApi} {...props} />} />
+          <Route path="/deposits/SongBM" render={(props) => <About javaWebApp={javaWebApp} dotnetApi={dotnetApi} {...props} />} />
+          <Route path="/orders/FFA" render={(props) => <About javaWebApp={javaWebApp} dotnetApi={dotnetApi} {...props} />} />
         </main>
       </Router>
 

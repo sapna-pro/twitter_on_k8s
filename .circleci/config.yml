@@ -57,6 +57,10 @@ jobs:
             sleep 120
             docker push $DockerUsername/sa-java-webapp:circleci
       - run:
+          name: Docker rs-dotnet Operations
+          command: |
+            echo "dotnet is running"
+      - run:
           name: deploy on K8S
           command: |
             echo "LOG IN COMPLETED" | docker login -u=$DockerUsername -p=$DockerPassword
@@ -81,6 +85,11 @@ jobs:
             kubectl apply -f sa-webapp-deployment.yaml
             sleep 10
             kubectl apply -f service-sa-webapp-lb.yaml
+            sleep 10
+            kubectl apply -f rs-dotnet-api-deployment.yml
+            sleep 10
+            kubectl apply -f rs-dotnet-api-service.yml
+
 workflows:
   version: 2
   build_and_test:
