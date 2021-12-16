@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rs-dotnet-api
+  labels:
+    app: rs-dotnet-api
+spec:
+  containers:
+    - image: cvam612/rs-dotnet-api
+      name: rs-dotnet-api
+      ports:
+        - containerPort: 80

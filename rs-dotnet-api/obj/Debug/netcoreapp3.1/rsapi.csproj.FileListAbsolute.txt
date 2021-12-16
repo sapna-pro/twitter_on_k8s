@@ -1,0 +1,40 @@
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\appsettings.json
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\rsapi.exe
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\rsapi.deps.json
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\rsapi.runtimeconfig.json
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\rsapi.runtimeconfig.dev.json
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\rsapi.dll
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\bin\Debug\netcoreapp3.1\rsapi.pdb
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.csprojAssemblyReference.cache
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.AssemblyInfoInputs.cache
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.AssemblyInfo.cs
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.csproj.CoreCompileInputs.cache
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.MvcApplicationPartsAssemblyInfo.cache
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.RazorTargetAssemblyInfo.cache
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\staticwebassets\rsapi.StaticWebAssets.Manifest.cache
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\staticwebassets\rsapi.StaticWebAssets.xml
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.dll
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.pdb
+D:\NEU Material\Semester 4\CSYE7220\Lecture 2\class3\rsapi\obj\Debug\netcoreapp3.1\rsapi.genruntimeconfig.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\appsettings.json
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\rsapi.exe
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\rsapi.deps.json
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\rsapi.runtimeconfig.json
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\rsapi.runtimeconfig.dev.json
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\rsapi.dll
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\bin\Debug\netcoreapp3.1\rsapi.pdb
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.csprojAssemblyReference.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.AssemblyInfoInputs.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.AssemblyInfo.cs
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.csproj.CoreCompileInputs.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.MvcApplicationPartsAssemblyInfo.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.RazorTargetAssemblyInfo.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\staticwebassets\rsapi.StaticWebAssets.Manifest.cache
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\staticwebassets\rsapi.StaticWebAssets.xml
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.dll
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.pdb
+D:\NEU Material\Semester 4\CSYE7220\Assignment4\rsapi\obj\Debug\netcoreapp3.1\rsapi.genruntimeconfig.cache
