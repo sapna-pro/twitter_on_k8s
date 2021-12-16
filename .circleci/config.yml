@@ -63,7 +63,6 @@ jobs:
       - run:
           name: deploy on K8S
           command: |
-            echo "LOG IN COMPLETED" | docker login -u=$DockerUsername -p=$DockerPassword
             aws eks update-kubeconfig --name terraform-eks-demo --region us-west-2 --role-arn arn:aws:iam::327657571721:user/sapna
             ls -al
             cp config ~/.kube/config
