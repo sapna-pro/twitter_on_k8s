@@ -1,0 +1,48 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rockstar-react-fe 
+spec:
+  selector:
+    matchLabels:
+      app: rockstar-react-fe
+  replicas: 1
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      annotations:
+        prometheus.io/path: "/status/format/prometheus"
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "80"
+      labels:
+        app: rockstar-react-fe
+    spec:
+      containers:
+        - image: deep2105/rockstar-react-fe:minikube
+          imagePullPolicy: Always
+          name: rockstar-react-fe 
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rockstar-react-fe-lb
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: rockstar-react-fe
