@@ -102,18 +102,6 @@ Workflow 1:
 * Similarly, creating docker image for frontend and pushing to docker hub
 * Kubectl configuration to apply deployments and load balancer to front-end layer which will be automatically linked with back-end layer
 
-Workflow 2:
-
-* Code checkout from Github
-* Connecting with Google cloud cluster
-* Deploy the front-end image created before on the cluster along with load balancer.
-* Autoscaling is configured in Terraform to scale them up or down
-
-Screenshot
-
-![App](https://github.com/sapna-pro/twitter_on_k8s/images/app.png)
-![Prometheus](https://github.com/sapna-pro/twitter_on_k8s/images/jmeter.png)
-
 ### Developers
 
 * Sapna Patel
