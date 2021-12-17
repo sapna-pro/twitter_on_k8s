@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rs-dotnet-api 
+spec:
+  selector:
+    matchLabels:
+      app: rs-dotnet-api
+  replicas: 2 
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: rs-dotnet-api
+    spec:
+      containers:
+        - image: cvam612/rs-dotnet-api
+          imagePullPolicy: Always
+          name: rs-dotnet-api 
+          ports:
+            - containerPort: 80

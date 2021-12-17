@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sa-flask-logic
+  labels:
+    app: sa-flask-logic
+spec:
+  containers:
+    - image: cvam612/sa-flask-logic
+      name: sa-flask-logic
+      ports:
+        - containerPort: 5050

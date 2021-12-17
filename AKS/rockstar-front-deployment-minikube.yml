@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rockstar-front 
+spec:
+  selector:
+    matchLabels:
+      app: rockstar-front
+  replicas: 3 
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: rockstar-front
+    spec:
+      containers:
+        - image: cvam612/rockstar-front:minikube
+          imagePullPolicy: Always
+          name: rockstar-front 
+          ports:
+            - containerPort: 80

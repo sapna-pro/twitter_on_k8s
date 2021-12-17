@@ -1,0 +1,29 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: sa-java-webapp 
+spec:
+  selector:
+    matchLabels:
+      app: sa-java-webapp
+  replicas: 2
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: sa-java-webapp
+    spec:
+      containers:
+        - image: cvam612/sa-java-webapp:minikube
+          imagePullPolicy: Always
+          name: sa-java-webapp
+          env:
+            - name: SA_LOGIC_API_URL 
+              value: "http://sa-flask-logic-lb" 
+          ports:
+            - containerPort: 8080

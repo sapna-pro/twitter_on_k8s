@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rockstar-front
+  labels:
+    app: rockstar-front
+spec:
+  containers:
+    - image: cvam612/rockstar-front:minikube
+      name: rockstar-front
+      ports:
+        - containerPort: 80

@@ -1,4 +1,4 @@
-kubernetes_client_id = "89db72c0-b039-42f3-a521-0910ce0459ca"
-kubernetes_client_secret = "4o7iKBGL3U_Yhj3F6UETTds8tzqk8jY-pG"
+kubernetes_client_id = "c12f8f43-db2d-4b0a-83bb-f47dd9d519d3"
+kubernetes_client_secret = "j7k.a-Epvs8FqZ0q_U0w4RljTWq4wEDJvz"
 location = "eastus"
-prefix = "finalproject"
+prefix = "final"

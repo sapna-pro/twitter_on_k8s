@@ -1,11 +1,11 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: rockstar-react-fe 
+  name: final-rockstar-app
 spec:
   selector:
     matchLabels:
-      app: rockstar-react-fe
+      app: final-rockstar-app
   replicas: 1
   minReadySeconds: 15 
   strategy:
@@ -20,12 +20,12 @@ spec:
         prometheus.io/scrape: "true"
         prometheus.io/port: "80"
       labels:
-        app: rockstar-react-fe
+        app: final-rockstar-app
     spec:
       containers:
-        - image: deep2105/rockstar-react-fe:minikube
+        - image: cvam612/rockstar-front:minikube
           imagePullPolicy: Always
-          name: rockstar-react-fe 
+          name: final-rockstar-app
           ports:
             - containerPort: 80
           resources:
@@ -37,7 +37,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: rockstar-react-fe-lb
+  name: final-rockstar-app-lb
 spec:
   type: LoadBalancer
   ports:
@@ -45,4 +45,4 @@ spec:
       protocol: TCP
       targetPort: 80
   selector:
-    app: rockstar-react-fe
+    app: final-rockstar-app

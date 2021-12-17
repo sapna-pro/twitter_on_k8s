@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sa-java-webapp
+  labels:
+    app: sa-java-webapp
+spec:
+  containers:
+    - image: cvam612/sa-java-webapp:minikube
+      name: sa-java-webapp
+      env:
+            - name: SA_LOGIC_API_URL 
+              value: "http://sa-flask-logic-lb"
+      ports:
+        - containerPort: 8080
